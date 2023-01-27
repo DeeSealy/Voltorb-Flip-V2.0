@@ -106,5 +106,20 @@ namespace Voltorb_Flip_V2._0
             MessageBox.Show("Special thanks to Butterfree/Dragonfree/antialiasis for use of their guide.");
 
         }
+
+        private void btnCheat_Click(object sender, EventArgs e)
+        {
+            // Toggles Cheating
+            if (setup.isCheating == false)
+            {
+                setup.isCheating = true;
+                btnCheat.Text = "Cheat: On";
+            } else
+            {
+                setup.isCheating = false;
+                btnCheat.Text = "Cheat: Off";
+            }
+
+        }
     }
 }

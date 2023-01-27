@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnThanks = new System.Windows.Forms.Button();
+            this.btnCheat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
@@ -138,11 +139,22 @@
             this.btnThanks.UseVisualStyleBackColor = true;
             this.btnThanks.Click += new System.EventHandler(this.btnThanks_Click);
             // 
+            // btnCheat
+            // 
+            this.btnCheat.Location = new System.Drawing.Point(436, 551);
+            this.btnCheat.Name = "btnCheat";
+            this.btnCheat.Size = new System.Drawing.Size(75, 23);
+            this.btnCheat.TabIndex = 11;
+            this.btnCheat.Text = "Cheat: Off";
+            this.btnCheat.UseVisualStyleBackColor = true;
+            this.btnCheat.Click += new System.EventHandler(this.btnCheat_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 615);
+            this.Controls.Add(this.btnCheat);
             this.Controls.Add(this.btnThanks);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -174,5 +186,6 @@
         private Label label2;
         private TextBox textBox1;
         private Button btnThanks;
+        private Button btnCheat;
     }
 }

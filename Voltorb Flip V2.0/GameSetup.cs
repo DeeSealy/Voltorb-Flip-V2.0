@@ -10,7 +10,6 @@ namespace Voltorb_Flip_V2._0
 {
     internal class GameSetup
     {
-
         public Button[,] _gameButtons = new Button[5, 5];
 
         private Label[] _colPoints = new Label[5];
@@ -28,6 +27,8 @@ namespace Voltorb_Flip_V2._0
         private int[] _colVoltorbTotal = new int[5];
 
         private int _totalVoltorbs = 0;
+
+        public bool isCheating = false;
 
         public GameSetup()
         {
@@ -72,7 +73,15 @@ namespace Voltorb_Flip_V2._0
                     _gameButtons[i,j].Left = xPos;
                     _gameButtons[i,j].Top = yPos;
 
-                    _gameButtons[i, j].Text = "?";
+                    // Allows the player to see the values of each button before they're clicked
+                    if (isCheating)
+                    {
+                        _gameButtons[i, j].Text = _rngResults[i,j].ToString();
+                    } else
+                    {
+                        _gameButtons[i, j].Text = "?";
+                    }
+                    
                     _gameButtons[i, j].Font = new Font("Segoe UI", 15);
 
                     //Left position moves to next button's position, based on button size
